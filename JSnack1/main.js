@@ -6,35 +6,36 @@ var arrayOggetti = [];
 // ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 var bici1 = {
     nomeBici: 'Savadeck',
-    pesoKG: 20
+    pesoKG: 2
 }
 
 var bici2 = {
     nomeBici: 'Vektor',
-    pesoKG: 17
+    pesoKG: 4
 }
 
 var bici3 = {
     nomeBici: 'Giuliani',
-    pesoKG: 21
+    pesoKG: 7
 }
 
 arrayOggetti.push(bici1, bici2, bici3);
 console.log(arrayOggetti);
 
 
-var finalPeso = 0;
+
+
 // stampare a schermo la bici con peso minore
+var min = 50;
+var pesoFinale = 0;
+
 for (var i = 0; i < arrayOggetti.length; i++) {
-
-        var tempPeso = arrayOggetti[i]['pesoKG'];
-
-        if (finalPeso == 0){
-            finalPeso = tempPeso;
-        }
-        if (tempPeso < finalPeso) {
-            finalPeso = tempPeso;
-        }
+    var pesoCorrente = arrayOggetti[i]['pesoKG'];
+    if(pesoCorrente < min){
+        pesoFinale = pesoCorrente;
+        min = pesoFinale;
+        var biciDaStampare = arrayOggetti[i];
+    }
 }
-
-console.log('la bici che ha il peso minore, ha un peso di: ' + finalPeso);
+console.log(pesoFinale);
+console.log(biciDaStampare);
