@@ -10,8 +10,8 @@ var numero2 = parseInt(prompt('inserisci secondo numero'));
 
 //Creare un nuovo array con i valori che si trovano in una posizione compresa tra i due numeri inseriti dall'utente.
 var arrayNuovo = [];
-for (var i = numero1; i < arrayNomi.length; i++) {
-    if (i <= numero2) {
+for (var i = (numero1 - 1); i < arrayNomi.length; i++) {
+    if (i <= (numero2 - 1)) {
         arrayNuovo.push(arrayNomi[i]);
     }
 }
