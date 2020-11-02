@@ -6,17 +6,17 @@ var arrayOggetti = [];
 // ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 var bici1 = {
     nomeBici: 'Savadeck',
-    pesoKG: 2
+    pesoKG: 20
 }
 
 var bici2 = {
     nomeBici: 'Vektor',
-    pesoKG: 4
+    pesoKG: 17
 }
 
 var bici3 = {
     nomeBici: 'Giuliani',
-    pesoKG: 7
+    pesoKG: 19
 }
 
 arrayOggetti.push(bici1, bici2, bici3);
@@ -39,3 +39,9 @@ for (var i = 0; i < arrayOggetti.length; i++) {
 }
 console.log(pesoFinale);
 console.log(biciDaStampare);
+
+for (var key in biciDaStampare) {
+    var valoriBiciDaStampare = biciDaStampare[key];
+}
+
+console.log('la bici da stampare: ' + biciDaStampare['nomeBici'] + ' ' + biciDaStampare['pesoKG'] + 'kg');
