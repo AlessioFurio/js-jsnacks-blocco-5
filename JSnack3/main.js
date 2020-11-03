@@ -24,11 +24,17 @@ var classe = [
 var classeCopia = [];
 
 for (var i = 0; i < classe.length; i++) {
-    classeCopia.push(classe[i]);
     //e aggiungere ai singoli elementi dell'array una nuova proprietà "position" che contiene una lettera casuale.
-    classeCopia[i]['position'] = stringGen(1);
-
+    var prodottoCopia = {};
+    for (var key in classe[i]) {
+        prodottoCopia[key] = classe[i][key];
+        console.log(prodottoCopia[key]);
+        prodottoCopia['position'] = stringGen(1);
+    }
+    classeCopia.push(prodottoCopia);
 }
+
+console.log(classe);
 console.log(classeCopia);
 
 
